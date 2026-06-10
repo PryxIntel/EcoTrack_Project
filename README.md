@@ -1,140 +1,356 @@
-EcoTrack - Hyper-Local Carbon and E-Waste Ledger
-
-Project Context and SDG Alignment
-
-EcoTrack is a full-stack web application engineered to address UN Sustainable Development Goal 13 (Climate Action). While macro-level environmental policies are debated globally, individual tools for precise carbon tracking and electronic waste (e-waste) auditing remain heavily fragmented. Consumer electronics are replaced at an accelerated rate, creating an unmonitored stream of digital toxic waste.
+\# 🌱 EcoTrack – Hyper-Local Carbon \& E-Waste Ledger
 
 
 
-EcoTrack bridges this gap by turning abstract climate goals into explicit, numerical feedback loops. It allows citizens to quantitatively track their physical commuting habits, audit household utility energy drawings, compete on a community leaderboard, and log structural electronic disposal slips to keep toxic materials out of traditional residential waste grids.
+\## 🚀 Overview
 
 
 
-Key Architectural Features
-
-Carbon Footprint Calculation Engine: A server-side algorithm built into Flask that processes routine daily metrics (transit parameters, utility asset uptimes) and translates them dynamically into exact kilogram CO2 emission values.
+EcoTrack is a full-stack web application designed to support \*\*UN Sustainable Development Goal (SDG) 13: Climate Action\*\* by helping individuals monitor their carbon footprint and manage electronic waste responsibly.
 
 
 
-Dynamic Analytics Dashboard: Pulls historic time-series logging data asynchronously from MongoDB and leverages a client-side visualization engine (Chart.js) to plot interactive emission progression trends.
+The platform transforms environmental awareness into measurable action by allowing users to track daily emissions, monitor energy consumption, earn sustainability rewards, and record e-waste disposal activities through an intuitive web interface.
 
 
 
-Gamified Reward Matrix: Implements an aggregate point-allocation layer that awards Eco-Points to users maintaining low-emission thresholds, sorting profiles into a live community leaderboard.
+\---
 
 
 
-E-Waste Disposal Ledger: A transactional auditing directory where users schedule drop-off slots for obsolete hardware, mitigating the risk of toxic heavy metals (lead, mercury, cadmium) leaching into surrounding soil matrices.
+\## 🎯 Key Features
 
 
 
-Tech Stack and Dependencies
-
-Frontend: HTML5, CSS3, JavaScript (Chart.js for visualizations, Bootstrap 5 for responsive mobile-first layouts, FontAwesome for iconography)
+\### 🌍 Carbon Footprint Calculator
 
 
 
-Backend Framework: Flask (Python 3.10) handling application routing, security context, and session states.
+Calculate estimated CO₂ emissions based on:
 
 
 
-Database Layer: MongoDB NoSQL document store, optimized for flexible schemas, time-series metrics, and transactional log indices.
+\* Daily commuting habits
+
+\* Vehicle usage
+
+\* Household energy consumption
+
+\* Appliance usage patterns
 
 
 
-Security Middleware: Production-grade cryptographic password salting and hashing handled via werkzeug.security.
+\### 📊 Analytics Dashboard
 
 
 
-Directory Structure
+Visualize environmental impact through:
 
-ecotrack/
 
-├── app.py                      # Main entry point and Flask routing configurations
 
-├── config.py                   # Environment variable rules and database connection parameters
+\* Interactive charts powered by Chart.js
+
+\* Historical emission trends
+
+\* Sustainability performance insights
+
+
+
+\### 🏆 EcoPoints \& Leaderboard
+
+
+
+Gamified engagement system that:
+
+
+
+\* Rewards eco-friendly behavior
+
+\* Tracks sustainability scores
+
+\* Displays community rankings
+
+
+
+\### ♻️ E-Waste Management
+
+
+
+Maintain a digital ledger for:
+
+
+
+\* Electronic waste records
+
+\* Recycling appointments
+
+\* Responsible disposal tracking
+
+
+
+\### 🔐 Secure Authentication
+
+
+
+\* User registration and login
+
+\* Password hashing using Werkzeug Security
+
+\* Session-based authentication
+
+
+
+\---
+
+
+
+\## 🛠️ Technology Stack
+
+
+
+\### Frontend
+
+
+
+\* HTML5
+
+\* CSS3
+
+\* JavaScript
+
+\* Bootstrap 5
+
+\* Chart.js
+
+\* Font Awesome
+
+
+
+\### Backend
+
+
+
+\* Python
+
+\* Flask
+
+
+
+\### Database
+
+
+
+\* MongoDB
+
+
+
+\### Security
+
+
+
+\* Werkzeug Password Hashing
+
+\* Session Management
+
+
+
+\---
+
+
+
+\## 📂 Project Structure
+
+
+
+```text
+
+EcoTrack\_Project/
+
+│
+
+├── app.py
+
+├── config.py
+
+├── requirements.txt
+
+│
 
 ├── database/
 
-│   └── db\_handler.py           # MongoDB collections, schema structures, and CRUD helper queries
+│   └── db\_handler.py
+
+│
 
 ├── static/
 
 │   ├── css/
 
-│   │   └── style.css           # Custom UI presentation branding, animations, and accents
+│   │   └── style.css
 
 │   └── js/
 
-│       ├── dashboard.js        # Chart.js time-series dataset parsing and graph compilation
+│       ├── dashboard.js
 
-│       └── main.js             # Client-side form validations and UI behavior rules
+│       └── main.js
 
-├── templates/
+│
 
-│   ├── base.html               # Master layout containing shared navbar, flash messages, and CDN links
+└── templates/
 
-│   ├── index.html              # Landing homepage displaying SDG 13 project objectives
+&#x20;   ├── base.html
 
-│   ├── login.html              # User session authentication gateway
+&#x20;   ├── index.html
 
-│   ├── register.html           # cryptographically secured account creation form
+&#x20;   ├── login.html
 
-│   ├── dashboard.html          # Interactive graph platform and live top-5 ranking board
+&#x20;   ├── register.html
 
-│   ├── calculator.html         # Commuter and appliance logging interface
+&#x20;   ├── dashboard.html
 
-│   └── ewaste.html             # Electronics recycling hub asset reservation system
+&#x20;   ├── calculator.html
 
-└── requirements.txt            # System dependency declarations
+&#x20;   └── ewaste.html
 
-
-
-Installation and Local Setup
-
-To deploy and test the system locally on your terminal, execute the following configuration steps:
+```
 
 
 
-Clone the Workspace:
+\---
 
-git clone https://github.com/YOUR\_USERNAME/EcoTrack\_Project.git
+
+
+\## ⚙️ Installation
+
+
+
+\### Clone Repository
+
+
+
+```bash
+
+git clone https://github.com/PryxIntel/EcoTrack\_Project.git
 
 cd EcoTrack\_Project
 
+```
 
 
-Install Required Packages:
+
+\### Install Dependencies
+
+
+
+```bash
 
 pip install -r requirements.txt
 
-
-
-Database Configuration:
-
-Ensure a local instance of MongoDB is active on port 27017 or insert your production MongoDB Atlas cloud cluster connection string securely inside config.py.
+```
 
 
 
-Boot the Web Application:
+\### Configure MongoDB
+
+
+
+Ensure MongoDB is running locally or update the connection string in `config.py`.
+
+
+
+\### Run Application
+
+
+
+```bash
 
 python app.py
 
-
-
-Navigate to http://127.0.0.1:5000 inside your web browser to interact with the platform.
-
-
-
-Future Scope and Scalability
-
-Automated Telemetry: Replacing manual entry forms with background GPS transit logging using mobile location tracking APIs.
+```
 
 
 
-Geospatial Mapping Layers: Swapping standard select boxes for an interactive map layout using Leaflet.js to pinpoint physical e-waste center coordinates instantly.
+Open:
 
 
 
-Role-Based Administrative Access: Integrating separate dashboard controls for verified municipal sanitation workers to review, manage, and mark submitted recycling appointments as Disposed.
+```text
+
+http://127.0.0.1:5000
+
+```
+
+
+
+\---
+
+
+
+\## 🌐 SDG Alignment
+
+
+
+\*\*United Nations Sustainable Development Goal 13 – Climate Action\*\*
+
+
+
+EcoTrack promotes sustainable living by encouraging users to:
+
+
+
+\* Monitor carbon emissions
+
+\* Reduce environmental impact
+
+\* Participate in responsible e-waste disposal
+
+\* Build long-term eco-conscious habits
+
+
+
+\---
+
+
+
+\## 🔮 Future Enhancements
+
+
+
+\* GPS-based automatic travel tracking
+
+\* AI-powered sustainability recommendations
+
+\* Interactive recycling center maps
+
+\* Mobile application support
+
+\* Administrative dashboard for waste management authorities
+
+
+
+\---
+
+
+
+\## 👨‍💻 Author
+
+
+
+\*\*Priyanshu Chauhan (PryxIntel)\*\*
+
+
+
+B.Tech Computer Science \& Engineering
+
+Madan Mohan Malaviya University of Technology (MMMUT)
+
+
+
+\---
+
+
+
+⭐ If you found this project useful, consider giving the repository a star.
+
+
 
