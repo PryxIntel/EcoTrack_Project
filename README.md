@@ -10,19 +10,19 @@
 
 
 
-!\[SDG 13](https://img.shields.io/badge/SDG-13%20Climate%20Action-success)
+\[!\[SDG 13](https://img.shields.io/badge/SDG-13%20Climate%20Action-success?style=for-the-badge)](https://sdgs.un.org/goals/goal13)
 
-!\[Python](https://img.shields.io/badge/Python-3.10-blue)
+\[!\[Python](https://img.shields.io/badge/Python-3.10-blue?style=for-the-badge\&logo=python\&logoColor=white)](https://www.python.org)
 
-!\[Flask](https://img.shields.io/badge/Flask-Backend-black)
+\[!\[Flask](https://img.shields.io/badge/Flask-Backend-black?style=for-the-badge\&logo=flask\&logoColor=white)](https://flask.palletsprojects.com)
 
-!\[MongoDB](https://img.shields.io/badge/MongoDB-NoSQL-green)
+\[!\[MongoDB](https://img.shields.io/badge/MongoDB-NoSQL-green?style=for-the-badge\&logo=mongodb\&logoColor=white)](https://www.mongodb.com)
 
-!\[Status](https://img.shields.io/badge/Status-Active-brightgreen)
+\[!\[Status](https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge)](#)
 
 
 
-A full-stack sustainability platform that helps users track carbon emissions, monitor energy consumption, earn eco-rewards, and manage electronic waste responsibly.
+A full-stack sustainability platform designed to help users calculate carbon emissions, monitor energy consumption, earn eco-rewards, and manage electronic waste responsibly.
 
 
 
@@ -38,15 +38,15 @@ A full-stack sustainability platform that helps users track carbon emissions, mo
 
 
 
-EcoTrack is a full-stack web application developed to support the \*\*United Nations Sustainable Development Goal (SDG 13: Climate Action)\*\*.
+\*\*EcoTrack\*\* is a full-stack web application developed to support the \*\*United Nations Sustainable Development Goal 13 (Climate Action)\*\*. 
 
 
 
-Environmental sustainability often remains difficult to measure at an individual level. EcoTrack addresses this challenge by providing users with tools to calculate carbon emissions, visualize environmental impact through analytics, participate in sustainability-driven leaderboards, and maintain a digital e-waste disposal record.
+While environmental sustainability can feel abstract and difficult to measure at an individual level, EcoTrack bridges this gap. The platform equips users with practical tools to calculate personal CO₂ emissions, visualize their environmental footprint through dynamic analytics, engage in community-driven leaderboards, and maintain a secure digital ledger for e-waste disposal. 
 
 
 
-The platform transforms environmental awareness into measurable action through data-driven insights and community engagement.
+By transforming awareness into measurable, gamified data, EcoTrack empowers individuals to take direct responsibility for their ecological footprint.
 
 
 
@@ -58,25 +58,21 @@ The platform transforms environmental awareness into measurable action through d
 
 
 
-Individuals often lack practical tools to understand and reduce their environmental impact.
+Most individuals want to live more sustainably but lack the structural tools to measure or mitigate their daily impact. Current challenges include:
 
 
 
-Major challenges include:
+\* \*\*Blind Spots in Carbon Data:\*\* Limited awareness of how everyday commuting and appliance choices translate into raw carbon numbers.
+
+\* \*\*Lack of Tracking Mechanisms:\*\* No unified historical view to check if personal sustainability habits are actually improving over time.
+
+\* \*\*The E-Waste Crisis:\*\* Improper disposal of household electronics due to a lack of organized documentation and tracking systems.
+
+\* \*\*Isolated Efforts:\*\* Minimal community interaction or gamified incentives to drive long-term, climate-conscious behavioral changes.
 
 
 
-\* Limited awareness of personal carbon emissions
-
-\* Lack of sustainability tracking mechanisms
-
-\* Improper disposal of electronic waste
-
-\* Minimal community engagement in climate-conscious activities
-
-
-
-EcoTrack provides a centralized platform that enables users to monitor, analyze, and improve their environmental footprint.
+EcoTrack provides a centralized, data-driven ecosystem to tackle these challenges effectively.
 
 
 
@@ -90,107 +86,41 @@ EcoTrack provides a centralized platform that enables users to monitor, analyze,
 
 \### 🌍 Carbon Footprint Calculator
 
+\* Estimates precise carbon emissions based on daily transport modes and vehicle details.
 
-
-Calculate estimated CO₂ emissions based on:
-
-
-
-\* Daily transportation habits
-
-\* Vehicle usage patterns
-
-\* Household energy consumption
-
-\* Appliance utilization data
-
-
-
-\---
+\* Quantifies household energy footprints by tracking domestic utility data and appliance runtimes.
 
 
 
 \### 📊 Analytics Dashboard
 
+\* Powered by \*\*Chart.js\*\* to render real-time, interactive performance metrics.
 
-
-Interactive environmental analytics powered by Chart.js:
-
-
-
-\* Carbon emission trends
-
-\* Historical environmental data
-
-\* Sustainability performance monitoring
-
-\* User activity insights
+\* Displays historical tracking, monthly emission trends, and category breakdown charts.
 
 
 
-\---
+\### 🏆 EcoPoints \& Leaderboard System
+
+\* Incentivizes eco-friendly choices with standard \*\*EcoPoint\*\* rewards.
+
+\* Features a community-wide leaderboard to foster healthy competition and continuous engagement.
 
 
 
-\### 🏆 EcoPoints \& Community Leaderboard
+\### ♻️ E-Waste Management Ledger
+
+\* Logs electronic items heading for disposal to support responsible recycling practices.
+
+\* Tracks structural lifecycle metrics to minimize hazardous trace metals in municipal waste streams.
 
 
 
-Gamified sustainability system featuring:
+\### 🔐 Secure Authentication \& Security
 
+\* Built-in user signup, login workflows, and active session states.
 
-
-\* EcoPoint rewards
-
-\* Community rankings
-
-\* Sustainability achievements
-
-\* User engagement tracking
-
-
-
-\---
-
-
-
-\### ♻️ E-Waste Management System
-
-
-
-Digital e-waste ledger that allows users to:
-
-
-
-\* Log electronic waste records
-
-\* Track disposal activities
-
-\* Promote responsible recycling practices
-
-\* Reduce environmental hazards from electronic waste
-
-
-
-\---
-
-
-
-\### 🔐 Secure Authentication
-
-
-
-Security features include:
-
-
-
-\* User registration
-
-\* Login authentication
-
-\* Password hashing
-
-\* Session management
+\* Utilizes \*\*Werkzeug\*\* security protocols for industry-standard password hashing and data safety.
 
 
 
@@ -202,23 +132,23 @@ Security features include:
 
 
 
-| Category        | Technologies            |
+| Layer | Technology | Purpose |
 
-| --------------- | ----------------------- |
+| :--- | :--- | :--- |
 
-| Frontend        | HTML5, CSS3, JavaScript |
+| \*\*Frontend\*\* | HTML5, CSS3, JavaScript | Core structure, styling, and interactive client logic |
 
-| UI Framework    | Bootstrap 5             |
+| \*\*UI Framework\*\* | Bootstrap 5 | Fully responsive grid system and reusable components |
 
-| Visualization   | Chart.js                |
+| \*\*Data Visualization\*\* | Chart.js | Renders responsive data trends and footprint tracking |
 
-| Backend         | Flask (Python)          |
+| \*\*Backend Framework\*\* | Flask (Python) | Robust server routing, API handling, and request logic |
 
-| Database        | MongoDB                 |
+| \*\*Database\*\* | MongoDB | Flexible, document-oriented NoSQL storage for high scalability |
 
-| Security        | Werkzeug Security       |
+| \*\*Security Layer\*\* | Werkzeug Security | Secure credential hashing and cryptographic helpers |
 
-| Version Control | Git \& GitHub            |
+| \*\*Version Control\*\* | Git \& GitHub | Code management, review pipelines, and deployment |
 
 
 
@@ -232,275 +162,37 @@ Security features include:
 
 ```text
 
-User Interface
+&#x20;      ┌─────────────────────────────────────────┐
 
-&#x20;      │
+&#x20;      │             User Interface              │
 
-&#x20;      ▼
+&#x20;      │       (HTML5 • CSS3 • JavaScript)       │
 
-HTML • CSS • JavaScript
+&#x20;      └────────────────────┬────────────────────┘
 
-&#x20;      │
+&#x20;                           │
 
-&#x20;      ▼
+&#x20;                           ▼
 
-Flask Backend
+&#x20;      ┌─────────────────────────────────────────┐
 
-&#x20;      │
+&#x20;      │              Flask Backend              │
 
-&#x20;┌─────┴─────┐
+&#x20;      │            (Python Routing)             │
 
-&#x20;▼           ▼
+&#x20;      └──────────────┬─────────────┬────────────┘
 
-MongoDB   Authentication
+&#x20;                     │             │
 
-Database   \& Sessions
+&#x20;        ┌────────────┴──┐       ┌──┴────────────┐
 
-```
+&#x20;        ▼               ▼       ▼               ▼
 
+&#x20;  ┌───────────┐   ┌───────────────────────────────────┐
 
+&#x20;  │  MongoDB  │   │      Session Management \&         │
 
-\---
+&#x20;  │ Database  │   │   Authentication (Werkzeug)       │
 
-
-
-\## 📂 Project Structure
-
-
-
-```text
-
-EcoTrack\_Project/
-
-│
-
-├── app.py
-
-├── config.py
-
-├── requirements.txt
-
-│
-
-├── database/
-
-│   └── db\_handler.py
-
-│
-
-├── static/
-
-│   ├── css/
-
-│   │   └── style.css
-
-│   │
-
-│   └── js/
-
-│       ├── dashboard.js
-
-│       └── main.js
-
-│
-
-└── templates/
-
-&#x20;   ├── base.html
-
-&#x20;   ├── index.html
-
-&#x20;   ├── login.html
-
-&#x20;   ├── register.html
-
-&#x20;   ├── dashboard.html
-
-&#x20;   ├── calculator.html
-
-&#x20;   └── ewaste.html
-
-```
-
-
-
-\---
-
-
-
-\## 🚀 Installation \& Setup
-
-
-
-\### 1. Clone Repository
-
-
-
-```bash
-
-git clone https://github.com/PryxIntel/EcoTrack\_Project.git
-
-cd EcoTrack\_Project
-
-```
-
-
-
-\### 2. Install Dependencies
-
-
-
-```bash
-
-pip install -r requirements.txt
-
-```
-
-
-
-\### 3. Configure Database
-
-
-
-Ensure MongoDB is running locally or update the MongoDB Atlas connection string in:
-
-
-
-```python
-
-config.py
-
-```
-
-
-
-\### 4. Run Application
-
-
-
-```bash
-
-python app.py
-
-```
-
-
-
-Open your browser and visit:
-
-
-
-```text
-
-http://127.0.0.1:5000
-
-```
-
-
-
-\---
-
-
-
-\## 🌍 SDG Alignment
-
-
-
-\### United Nations SDG 13 – Climate Action
-
-
-
-EcoTrack contributes to climate action by:
-
-
-
-\* Encouraging environmentally responsible behavior
-
-\* Increasing awareness of carbon emissions
-
-\* Promoting sustainable lifestyle choices
-
-\* Supporting proper e-waste disposal practices
-
-
-
-\---
-
-
-
-\## 🔮 Future Scope
-
-
-
-Planned enhancements include:
-
-
-
-\* GPS-based travel tracking
-
-\* AI-powered sustainability recommendations
-
-\* Recycling center mapping integration
-
-\* Mobile application development
-
-\* Administrative dashboards for municipal authorities
-
-\* Smart environmental reporting systems
-
-
-
-\---
-
-
-
-\## 👨‍💻 Developer
-
-
-
-\*\*Priyanshu Chauhan\*\*
-
-
-
-B.Tech – Computer Science \& Engineering
-
-Madan Mohan Malaviya University of Technology (MMMUT)
-
-
-
-GitHub: https://github.com/PryxIntel
-
-
-
-\---
-
-
-
-\## 📜 License
-
-
-
-This project was developed for academic and educational purposes as part of a Web Development Capstone Project.
-
-
-
-\---
-
-
-
-<div align="center">
-
-
-
-\### 🌱 Building Technology for a Sustainable Future
-
-
-
-Made with Flask, MongoDB, and a commitment to Climate Action.
-
-
-
-</div>
-
-
+&#x20;  └───────────┘   └───────────────────────────────────┘
 
