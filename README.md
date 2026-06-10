@@ -1,16 +1,37 @@
-\# 🌱 EcoTrack – Hyper-Local Carbon \& E-Waste Ledger
+\## 📸 Screenshots
 
 
 
-\## 🚀 Overview
+\### Home Page
+
+!\[Home](screenshots/home.png)
 
 
 
-EcoTrack is a full-stack web application designed to support \*\*UN Sustainable Development Goal (SDG) 13: Climate Action\*\* by helping individuals monitor their carbon footprint and manage electronic waste responsibly.
+\### Dashboard
+
+!\[Dashboard](screenshots/dashboard.png)
 
 
 
-The platform transforms environmental awareness into measurable action by allowing users to track daily emissions, monitor energy consumption, earn sustainability rewards, and record e-waste disposal activities through an intuitive web interface.
+\### E-Waste Module
+
+!\[E-Waste](screenshots/ewaste.png)
+# 🌱 EcoTrack
+
+
+
+\### Hyper-Local Carbon Footprint \& E-Waste Management Platform
+
+
+
+\[!\[SDG 13](https://img.shields.io/badge/SDG-13%20Climate%20Action-green)]()
+
+\[!\[Flask](https://img.shields.io/badge/Backend-Flask-blue)]()
+
+\[!\[MongoDB](https://img.shields.io/badge/Database-MongoDB-green)]()
+
+\[!\[Python](https://img.shields.io/badge/Python-3.10-yellow)]()
 
 
 
@@ -18,83 +39,97 @@ The platform transforms environmental awareness into measurable action by allowi
 
 
 
-\## 🎯 Key Features
+\## 📖 Project Overview
 
 
 
-\### 🌍 Carbon Footprint Calculator
+EcoTrack is a full-stack web application developed to support \*\*United Nations Sustainable Development Goal (SDG) 13: Climate Action\*\*.
 
 
 
-Calculate estimated CO₂ emissions based on:
+The platform enables users to monitor their carbon footprint, track energy consumption, earn sustainability rewards, and manage e-waste disposal through an intuitive and data-driven interface.
 
 
 
-\* Daily commuting habits
-
-\* Vehicle usage
-
-\* Household energy consumption
-
-\* Appliance usage patterns
+\---
 
 
 
-\### 📊 Analytics Dashboard
+\## 🎯 Problem Statement
 
 
 
-Visualize environmental impact through:
+Many individuals are unaware of the environmental impact of their daily activities. Carbon emissions from transportation and household energy usage, combined with improper disposal of electronic waste, contribute significantly to environmental degradation.
 
 
 
-\* Interactive charts powered by Chart.js
+EcoTrack addresses this challenge by providing users with actionable insights and responsible e-waste tracking mechanisms.
 
-\* Historical emission trends
+
+
+\---
+
+
+
+\## ✨ Features
+
+
+
+\### Carbon Footprint Calculator
+
+
+
+\* Track daily transportation activities
+
+\* Monitor household energy consumption
+
+\* Calculate estimated CO₂ emissions
+
+
+
+\### Analytics Dashboard
+
+
+
+\* Interactive charts using Chart.js
+
+\* Historical carbon emission trends
 
 \* Sustainability performance insights
 
 
 
-\### 🏆 EcoPoints \& Leaderboard
+\### EcoPoints System
 
 
 
-Gamified engagement system that:
+\* Reward-based sustainability tracking
+
+\* Community leaderboard
+
+\* User ranking system
 
 
 
-\* Rewards eco-friendly behavior
-
-\* Tracks sustainability scores
-
-\* Displays community rankings
+\### E-Waste Management
 
 
 
-\### ♻️ E-Waste Management
+\* Record electronic waste disposal
+
+\* Schedule recycling activities
+
+\* Promote responsible waste management
 
 
 
-Maintain a digital ledger for:
-
-
-
-\* Electronic waste records
-
-\* Recycling appointments
-
-\* Responsible disposal tracking
-
-
-
-\### 🔐 Secure Authentication
+\### Secure Authentication
 
 
 
 \* User registration and login
 
-\* Password hashing using Werkzeug Security
+\* Password hashing with Werkzeug
 
 \* Session-based authentication
 
@@ -104,53 +139,25 @@ Maintain a digital ledger for:
 
 
 
-\## 🛠️ Technology Stack
+\## 🛠 Technology Stack
 
 
 
-\### Frontend
+| Category      | Technology              |
 
+| ------------- | ----------------------- |
 
+| Frontend      | HTML5, CSS3, JavaScript |
 
-\* HTML5
+| UI Framework  | Bootstrap 5             |
 
-\* CSS3
+| Visualization | Chart.js                |
 
-\* JavaScript
+| Backend       | Flask                   |
 
-\* Bootstrap 5
+| Database      | MongoDB                 |
 
-\* Chart.js
-
-\* Font Awesome
-
-
-
-\### Backend
-
-
-
-\* Python
-
-\* Flask
-
-
-
-\### Database
-
-
-
-\* MongoDB
-
-
-
-\### Security
-
-
-
-\* Werkzeug Password Hashing
-
-\* Session Management
+| Security      | Werkzeug Security       |
 
 
 
@@ -164,7 +171,7 @@ Maintain a digital ledger for:
 
 ```text
 
-EcoTrack\_Project/
+EcoTrack\_Project
 
 │
 
@@ -176,19 +183,19 @@ EcoTrack\_Project/
 
 │
 
-├── database/
+├── database
 
 │   └── db\_handler.py
 
 │
 
-├── static/
+├── static
 
-│   ├── css/
+│   ├── css
 
 │   │   └── style.css
 
-│   └── js/
+│   └── js
 
 │       ├── dashboard.js
 
@@ -196,7 +203,7 @@ EcoTrack\_Project/
 
 │
 
-└── templates/
+└── templates
 
 &#x20;   ├── base.html
 
@@ -254,7 +261,7 @@ pip install -r requirements.txt
 
 
 
-Ensure MongoDB is running locally or update the connection string in `config.py`.
+Start MongoDB locally or update the MongoDB Atlas connection string inside `config.py`.
 
 
 
@@ -286,25 +293,25 @@ http://127.0.0.1:5000
 
 
 
-\## 🌐 SDG Alignment
+\## 🌍 SDG Alignment
 
 
 
-\*\*United Nations Sustainable Development Goal 13 – Climate Action\*\*
+\*\*SDG 13 – Climate Action\*\*
 
 
 
-EcoTrack promotes sustainable living by encouraging users to:
+EcoTrack contributes to climate action by:
 
 
 
-\* Monitor carbon emissions
+\* Encouraging sustainable lifestyles
 
-\* Reduce environmental impact
+\* Tracking carbon emissions
 
-\* Participate in responsible e-waste disposal
+\* Promoting responsible e-waste disposal
 
-\* Build long-term eco-conscious habits
+\* Raising environmental awareness
 
 
 
@@ -312,19 +319,19 @@ EcoTrack promotes sustainable living by encouraging users to:
 
 
 
-\## 🔮 Future Enhancements
+\## 🚀 Future Scope
 
 
-
-\* GPS-based automatic travel tracking
 
 \* AI-powered sustainability recommendations
 
+\* GPS-based automatic travel tracking
+
 \* Interactive recycling center maps
 
-\* Mobile application support
+\* Mobile application development
 
-\* Administrative dashboard for waste management authorities
+\* Administrative dashboards for municipalities
 
 
 
@@ -332,7 +339,7 @@ EcoTrack promotes sustainable living by encouraging users to:
 
 
 
-\## 👨‍💻 Author
+\## 👨‍💻 Developer
 
 
 
@@ -350,7 +357,12 @@ Madan Mohan Malaviya University of Technology (MMMUT)
 
 
 
-⭐ If you found this project useful, consider giving the repository a star.
+\### ⭐ Support
+
+
+
+If you found this project useful, consider starring the repository.
+
 
 
 
