@@ -1,0 +1,54 @@
+/* Custom Global Variables for SDG 13 Branding */
+:root {
+    --sdg-green: #198754;
+    --sdg-dark: #212529;
+    --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    --hover-transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+/* Custom Navbar Adjustments */
+.navbar {
+    border-bottom: 3px solid #146c43;
+}
+
+.navbar-brand i {
+    transition: var(--hover-transition);
+}
+
+.navbar-brand:hover i {
+    transform: rotate(20deg) scale(1.1);
+}
+
+/* Dynamic Card Hover Animations */
+.card {
+    transition: var(--hover-transition);
+    border: none !important;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Custom Interactive UI Accents */
+.badge {
+    letter-spacing: 0.5px;
+}
+
+.table th {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+    color: #6c757d;
+}
+
+/* Hero Section Drop Shadow styling */
+.drop-shadow {
+    filter: drop-shadow(0px 8px 16px rgba(25, 135, 84, 0.2));
+}

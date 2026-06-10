@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card border-0 shadow-sm rounded-3">
+                <div class="card-header bg-success text-white py-3">
+                    <h4 class="mb-0 fw-bold"><i class="fa-solid fa-square-poll-horizontal me-2"></i>Log Daily Ecological Metrics</h4>
+                </div>
+                <div class="card-body p-4">
+                    <form action="{{ url_for('calculator') }}" method="POST">
+                        
+                        <h5 class="text-success fw-bold mb-3 border-bottom pb-2"><i class="fa-solid fa-car-side me-2"></i>1. Commuter Metrics</h5>
+                        <div class="row g-3 mb-4">
+                            <div class="col-md-6">
+                                <label for="transport_type" class="form-label fw-semibold">Primary Transit Mode</label>
+                                <select class="form-select" id="transport_type" name="transport_type">
+                                    <option value="electric_vehicle">Electric Vehicle (EV)</option>
+                                    <option value="public_bus">Public Bus / Metro Transit</option>
+                                    <option value="two_wheeler">Petrol Scooter / Motorbike</option>
+                                    <option value="petrol_car">Standard Petrol / Diesel Car</option>
+                                    <option value="bicycle_walk">Walking / Bicycle (Zero Emission)</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="distance_km" class="form-label fw-semibold">Distance Traveled (in KM)</label>
+                                <input type="number" step="0.1" class="form-control" id="distance_km" name="distance_km" placeholder="e.g., 12.5" min="0" required>
+                            </div>
+                        </div>
+
+                        <h5 class="text-success fw-bold mb-3 border-bottom pb-2"><i class="fa-solid fa-plug text-danger me-2"></i>2. Household Utility Assets</h5>
+                        <div class="mb-4">
+                            <label for="appliance_hours" class="form-label fw-semibold">High-Draw Appliance Operational Time (Hours/Day)</label>
+                            <p class="text-muted small mt-1">Estimate total cumulative runtimes of Air Conditioners, water heaters, or high-end computational hardware grids.</p>
+                            <div class="input-group">
+                                <input type="number" step="0.5" class="form-control" id="appliance_hours" name="appliance_hours" placeholder="e.g., 4.5" min="0" required>
+                                <span class="input-group-text bg-light">Hours</span>
+                            </div>
+                        </div>
+
+                        <div class="d-grid mt-4">
+                            <button type="submit" class="btn btn-success btn-lg fw-bold shadow-sm">Compute & Commit Log</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

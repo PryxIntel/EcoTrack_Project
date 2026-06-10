@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row g-4">
+        <div class="col-lg-4 order-lg-2">
+            <div class="card border-0 shadow-sm rounded-3 mb-4 bg-success text-white">
+                <div class="card-body text-center p-4">
+                    <h6 class="text-uppercase small fw-bold opacity-75">Your Total Impact</h6>
+                    <h1 class="display-3 fw-bold my-2">{{ user.total_eco_points }}</h1>
+                    <p class="mb-0">Eco-Points Earned</p>
+                </div>
+            </div>
+
+            <div class="card border-0 shadow-sm rounded-3">
+                <div class="card-header bg-white border-0 py-3">
+                    <h5 class="mb-0 fw-bold"><i class="fa-solid fa-ranking-star me-2 text-warning"></i>Leaderboard</h5>
+                </div>
+                <div class="card-body p-0">
+                    <ul class="list-group list-group-flush">
+                        {% for entry in leaderboard %}
+                        <li class="list-group-item d-flex justify-content-between align-items-center py-3">
+                            <div>
+                                <span class="fw-bold me-2">#{{ loop.index }}</span> {{ entry.username }}
+                                {% if entry.username == session.get('username') %}<span class="badge bg-success ms-1">You</span>{% endif %}
+                            </div>
+                            <span class="badge bg-success-subtle text-success rounded-pill px-3">{{ entry.total_eco_points }} pts</span>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-8 order-lg-1">
+            <div class="card border-0 shadow-sm rounded-3 mb-4">
+                <div class="card-body p-4">
+                    <h5 class="fw-bold mb-4">Emission Trends (Daily Log Analysis)</h5>
+                    <canvas id="emissionChart" height="250"></canvas>
+                </div>
+            </div>
+
+            <div class="card border-0 shadow-sm rounded-3">
+                <div class="card-header bg-white border-0 py-3">
+                    <h5 class="mb-0 fw-bold">Recent Activity Ledger</h5>
+                </div>
+                <div class="card-body p-0">
+                    <div class="table-responsive">
+                        <table class="table table-hover mb-0 align-middle">
+                            <thead class="bg-light">
+                                <tr>
+                                    <th class="px-4">Date</th>
+                                    <th>Transport</th>
+                                    <th>Emissions</th>
+                                    <th class="text-end px-4">Points</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for log in logs %}
+                                <tr>
+                                    <td class="px-4 text-muted small">{{ log.date }}</td>
+                                    <td><span class="text-capitalize">{{ log.transport_type.replace('_', ' ') }}</span></td>
+                                    <td class="fw-bold text-danger">{{ log.calculated_emissions_kg }} kg</td>
+                                    <td class="text-end px-4 text-success fw-bold">+{{ log.points_earned }}</td>
+                                </tr>
+                                {% else %}
+                                <tr>
+                                    <td colspan="4" class="text-center py-5 text-muted">No logs recorded yet. <a href="{{ url_for('calculator') }}">Start tracking!</a></td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const chartLabels = [{% for log in logs|reverse %}"{{ log.date }}",{% endfor %}];
+    const chartData = [{% for log in logs|reverse %}{{ log.calculated_emissions_kg }},{% endfor %}];
+</script>
+<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+{% endblock %}

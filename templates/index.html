@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row align-items-center bg-white p-5 rounded-3 shadow-sm mb-5">
+        <div class="col-lg-7">
+            <span class="badge bg-success mb-2 px-3 py-2 text-uppercase tracking-wider">SDG 13: Climate Action Project</span>
+            <h1 class="display-4 fw-bold text-dark mb-3">Track Your Footprint.<br><span class="text-success">Heal Our Planet.</span></h1>
+            <p class="lead text-muted mb-4">EcoTrack bridges the gap between global environmental initiatives and individual daily choices. Monitor daily carbon metrics, earn eco-rewards, and responsibly audit local e-waste disposal.</p>
+            {% if not session.get('user_id') %}
+                <a href="{{ url_for('register') }}" class="btn btn-success btn-lg fw-bold me-2 px-4 shadow-sm">Get Started</a>
+                <a href="{{ url_for('login') }}" class="btn btn-outline-secondary btn-lg px-4">Sign In</a>
+            {% else %}
+                <a href="{{ url_for('dashboard') }}" class="btn btn-success btn-lg fw-bold px-4 shadow-sm">Go to Dashboard</a>
+            {% endif %}
+        </div>
+        <div class="col-lg-5 text-center d-none d-lg-block">
+            <i class="fa-solid fa-earth-asia text-success fa-10x opacity-75 drop-shadow"></i>
+        </div>
+    </div>
+
+    <div class="row text-center g-4">
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm p-4">
+                <div class="card-body">
+                    <div class="bg-success-subtle text-success rounded-circle d-inline-flex p-3 mb-3">
+                        <i class="fa-solid fa-calculator fa-2x"></i>
+                    </div>
+                    <h4 class="fw-bold">Carbon Calculus</h4>
+                    <p class="text-muted small mb-0">Input daily commuting metrics and household appliance runtime to dynamically compile your personalized CO₂ output ledger.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm p-4">
+                <div class="card-body">
+                    <div class="bg-success-subtle text-success rounded-circle d-inline-flex p-3 mb-3">
+                        <i class="fa-solid fa-trophy fa-2x"></i>
+                    </div>
+                    <h4 class="fw-bold">Gamified Action</h4>
+                    <p class="text-muted small mb-0">Earn calculated Eco-Points for low-emission choices and compete on a live campus-wide leaderboard to incentivize green habits.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm p-4">
+                <div class="card-body">
+                    <div class="bg-success-subtle text-success rounded-circle d-inline-flex p-3 mb-3">
+                        <i class="fa-solid fa-recycle fa-2x"></i>
+                    </div>
+                    <h4 class="fw-bold">E-Waste Auditing</h4>
+                    <p class="text-muted small mb-0">Directly book and log structural electronics recycling slips targeted at reducing domestic toxic chemical runoff.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row g-4">
+        <div class="col-md-5">
+            <div class="card border-0 shadow-sm rounded-3 bg-success text-white">
+                <div class="card-body p-4">
+                    <h4 class="fw-bold"><i class="fa-solid fa-recycle me-2"></i>E-Waste Action Hub</h4>
+                    <p class="small opacity-75">Responsible disposal of electronics prevents toxic runoff into soil and groundwater. Log your drop-offs below.</p>
+                    <hr class="opacity-25">
+                    <form action="{{ url_for('ewaste') }}" method="POST">
+                        <div class="mb-3">
+                            <label class="form-label">Device Category</label>
+                            <select class="form-select border-0" name="device_type" required>
+                                <option value="Smartphone/Tablet">Smartphone / Tablet</option>
+                                <option value="Laptop/PC">Laptop / Computer Gear</option>
+                                <option value="Battery/Chargers">Batteries & Cables</option>
+                                <option value="Home Appliances">Small Home Appliances</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Regional Hub Center</label>
+                            <select class="form-select border-0" name="center_name" required>
+                                <option value="Municipal E-Waste Unit A">Municipal E-Waste Unit A</option>
+                                <option value="Campus Green Recycling Hub">Campus Green Recycling Hub</option>
+                                <option value="Tech-Park Waste Center">Tech-Park Waste Center</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Scheduled Date</label>
+                            <input type="date" class="form-control border-0" name="scheduled_date" required>
+                        </div>
+                        <button type="submit" class="btn btn-light text-success fw-bold w-100 shadow-sm mt-2">Generate Disposal Slip</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-7">
+            <div class="card border-0 shadow-sm rounded-3 h-100">
+                <div class="card-header bg-white py-3 border-0">
+                    <h5 class="mb-0 fw-bold">Active Recycling Requests</h5>
+                </div>
+                <div class="card-body p-0">
+                    <div class="table-responsive">
+                        <table class="table table-hover mb-0 align-middle">
+                            <thead class="bg-light">
+                                <tr>
+                                    <th class="px-4">Device</th>
+                                    <th>Center</th>
+                                    <th>Date</th>
+                                    <th class="text-end px-4">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for appt in appointments %}
+                                <tr>
+                                    <td class="px-4 fw-bold">{{ appt.device_type }}</td>
+                                    <td class="small text-muted">{{ appt.center_name }}</td>
+                                    <td>{{ appt.scheduled_date }}</td>
+                                    <td class="text-end px-4">
+                                        <span class="badge bg-warning-subtle text-warning">{{ appt.status }}</span>
+                                    </td>
+                                </tr>
+                                {% else %}
+                                <tr>
+                                    <td colspan="4" class="text-center py-5 text-muted small">No active recycling slips. Help reduce toxic waste today!</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
